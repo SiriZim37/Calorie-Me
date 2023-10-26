@@ -58,18 +58,18 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="@dimen/padding_large"
+            android:layout_marginTop="@dimen/padding_normal"
+            android:padding="@dimen/padding_normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv1">
 
             <LinearLayout
                 android:id="@+id/l3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -112,7 +112,7 @@
                     style="@style/MyCardView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_large">
+                    android:layout_marginStart="@dimen/margin_medium">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/li_m"
@@ -121,8 +121,7 @@
                         android:padding="@dimen/padding_large"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintStart_toStartOf="parent">
 
                         <ImageView
                             android:id="@+id/female_bt"
@@ -142,166 +141,203 @@
             </LinearLayout>
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="@+id/l3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/l3">
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/lyAge"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/l3"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/l3">-->
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bg_white_corner_radius"
-                    android:padding="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/bg_white_corner_radius"-->
+<!--                    android:padding="16dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
 
-                    <TextView
-                        android:id="@+id/title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:includeFontPadding="false"
-                        android:text="Age"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/text_large_size"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Age" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/title"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="Age"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_large_size"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        tools:text="Age" />-->
 
-                    <NumberPicker
-                        android:id="@+id/filter_picker"
-                        android:layout_width="100dp"
-                        android:layout_height="150dp"
-                        android:descendantFocusability="blocksDescendants"
-                        android:orientation="horizontal"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/title" />
+<!--                    <NumberPicker-->
+<!--                        android:id="@+id/filter_picker"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:descendantFocusability="blocksDescendants"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/title" />-->
 
-                    <!--                        <com.google.android.material.textfield.TextInputLayout-->
-                    <!--                            android:id="@+id/age_ET"-->
-                    <!--                            android:layout_width="100dp"-->
-                    <!--                            android:layout_height="match_parent"-->
-                    <!--                            android:layout_marginLeft="10dp"-->
-                    <!--                            android:hint="Age"-->
-                    <!--                            android:maxEms="3">-->
+<!--                    &lt;!&ndash;                        <com.google.android.material.textfield.TextInputLayout&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:id="@+id/age_ET"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_width="100dp"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:layout_marginLeft="10dp"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:hint="Age"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            android:maxEms="3">&ndash;&gt;-->
 
-                    <!--                            <com.google.android.material.textfield.TextInputEditText-->
-                    <!--                                android:layout_width="match_parent"-->
-                    <!--                                android:layout_height="wrap_content" />-->
+<!--                    &lt;!&ndash;                            <com.google.android.material.textfield.TextInputEditText&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                android:layout_width="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                android:layout_height="wrap_content" />&ndash;&gt;-->
 
-                    <!--                        </com.google.android.material.textfield.TextInputLayout>-->
+<!--                    &lt;!&ndash;                        </com.google.android.material.textfield.TextInputLayout>&ndash;&gt;-->
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/l2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_large"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:padding="@dimen/padding_normal"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="@drawable/bg_white_corner_radius"
+                android:layout_marginTop="@dimen/margin_large">
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <TextView
+                    android:id="@+id/t_Age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:gravity="center"
-                    android:orientation="vertical">
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/height_ET"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:hint="Height (in cms)">
+                    android:includeFontPadding="false"
+                    android:text="Age"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="@+id/filter_picker_age"
+                    app:layout_constraintStart_toStartOf="@+id/filter_picker_age"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Age" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/input_height_ET"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/white"
-                            android:singleLine="true"
-                            android:inputType="number"
-                            android:maxEms="3"/>
+                <NumberPicker
+                    android:id="@+id/filter_picker_age"
+                    android:layout_width="70dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@+id/filter_picker_height"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/filter_picker_height" />
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/t_Year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="(year)"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="@dimen/text_large_size"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    app:layout_constraintStart_toStartOf="@+id/filter_picker_age"
+                    app:layout_constraintTop_toBottomOf="@+id/filter_picker_age"
+                    app:layout_constraintEnd_toEndOf="@+id/filter_picker_age"
+                    tools:text="(year)" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/weight_ET"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:hint="Weight (in kgs)"
-                        android:layout_marginTop="@dimen/margin_large">
+                <TextView
+                    android:id="@+id/t_Height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Height"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="@+id/filter_picker_height"
+                    app:layout_constraintStart_toStartOf="@+id/filter_picker_height"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Height" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/input_weight_ET"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/white"
-                            android:singleLine="true"
-                            android:inputType="number"
-                            android:maxEms="3"/>
+                    <NumberPicker
+                    android:id="@+id/filter_picker_height"
+                    android:layout_width="70dp"
+                    android:layout_height="150dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t_Height" />
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/t_cms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="(cms)"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="@dimen/text_large_size"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/filter_picker_height"
+                    app:layout_constraintStart_toStartOf="@+id/filter_picker_height"
+                    app:layout_constraintTop_toBottomOf="@+id/filter_picker_height"
+                    tools:text="(cms)" />
 
-                </androidx.appcompat.widget.LinearLayoutCompat>
 
+                <TextView
+                    android:id="@+id/t_Weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Weight"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large_size"
+                    app:layout_constraintEnd_toEndOf="@+id/filter_picker_weight"
+                    app:layout_constraintStart_toStartOf="@+id/filter_picker_weight"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Weight" />
 
+                <NumberPicker
+                    android:id="@+id/filter_picker_weight"
+                    android:layout_width="70dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/filter_picker_height"
+                    app:layout_constraintTop_toTopOf="@+id/filter_picker_height" />
 
+                <TextView
+                    android:id="@+id/t_kgs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="(kgs)"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="@dimen/text_large_size"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/filter_picker_weight"
+                    app:layout_constraintStart_toStartOf="@+id/filter_picker_weight"
+                    app:layout_constraintTop_toBottomOf="@+id/filter_picker_weight"
+                    tools:text="(kgs)" />
 
-
-
-<!--                <EditText-->
-<!--                    android:id="@+id/height_ET"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginLeft="10dp"-->
-<!--                    android:hint="Height (in cms)"-->
-<!--                    android:singleLine="true"-->
-<!--                    android:inputType="number"-->
-<!--                    android:maxEms="3"-->
-<!--                    android:layout_weight="1"/>-->
-
-<!--                <EditText-->
-<!--                    android:id="@+id/weight_ET"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginLeft="10dp"-->
-<!--                    android:hint="Weight (in kgs)"-->
-<!--                    android:inputType="number"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:maxEms="3"-->
-<!--                    android:singleLine="true"-->
-<!--                    />-->
-
-<!--                <EditText-->
-<!--                    android:id="@+id/age_ET"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginLeft="10dp"-->
-<!--                    android:layout_marginRight="10dp"-->
-<!--                    android:hint="Age"-->
-<!--                    android:inputType="number"-->
-<!--                    android:maxEms="2"-->
-<!--                    android:singleLine="true"-->
-<!--                    android:layout_weight="1"/>-->
-
-            </LinearLayout>
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <RadioGroup
                 android:id="@+id/radioGroupGender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_small"
+                android:padding="@dimen/padding_normal"
                 android:orientation="vertical">
 
                 <RadioButton
@@ -409,7 +445,6 @@
                 </RelativeLayout>
 
             </LinearLayout>
-
 
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

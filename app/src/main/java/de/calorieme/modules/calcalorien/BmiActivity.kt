@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.widget.NumberPicker
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +20,8 @@ class BmiActivity  : AppCompatActivity(){
     lateinit var progressBar: ProgressBar
     var i = 0
     var aGE = 0
+    var hEIGHT = 0
+    var wEIGHT = 0
     var gendertype : String= ""
 
     private val viewModel by lazy {
@@ -45,6 +46,7 @@ class BmiActivity  : AppCompatActivity(){
 
         progressBar = findViewById(R.id.progress_circular)
         progress_layout.visibility = View.GONE
+        configPickerNummer()
 
         if(data_id == "F"){
             img_fm.visibility = View.VISIBLE
@@ -76,40 +78,59 @@ class BmiActivity  : AppCompatActivity(){
             value = 1.90f
         }
 
-        filter_picker.maxValue = 99
-        filter_picker.minValue = 10
-        filter_picker.value = 10
-
-        filter_picker.setOnValueChangedListener { picker, oldVal, newVal ->
-            aGE = newVal
-//            Toast.makeText(this, aGE.toString(), Toast.LENGTH_LONG).show()
-            //Display the newly selected number to text view
-//            text_view.text = "Selected Value : $newVal"
-        }
 
         select_fm.setOnClickListener {
             gendertype = "F"
-            li_fm.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.normalblue))
+            li_fm.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.teal_700))
             li_m.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.white))
         }
         select_m.setOnClickListener {
             gendertype = "M"
-            li_m.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.normalblue))
+            li_m.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.teal_700))
             li_fm.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.white))
         }
 
         calculate.setOnClickListener {
-            var height = input_height_ET.text.toString()
-            var weight = input_weight_ET.text.toString()
 
-            if( height == "" || weight == "" || aGE.toString() == "" || value ==  0f || gendertype == ""){
+            if( hEIGHT.toString()  == "" || wEIGHT.toString()  == "" || aGE.toString() == "" || value ==  0f || gendertype == ""){
                 Toast.makeText(this, "Please fill all your information", Toast.LENGTH_LONG).show()
             }else{
-                viewModel.calculationCalorien( gendertype!! , height.toFloat() ,weight.toFloat()  , aGE.toFloat() , value)
+                viewModel.calculationCalorien( gendertype!! , hEIGHT.toFloat() ,wEIGHT.toFloat()  , aGE.toFloat() , value)
             }
 
         }
 
+    }
+
+    fun configPickerNummer(){
+
+        filter_picker_age.maxValue = 99
+        filter_picker_age.minValue = 0
+        filter_picker_age.value = 10
+
+        filter_picker_height.maxValue = 300
+        filter_picker_height.minValue = 0
+        filter_picker_height.value = 150
+
+        filter_picker_weight.maxValue = 400
+        filter_picker_weight.minValue = 0
+        filter_picker_weight.value = 45
+
+
+        filter_picker_age.setOnValueChangedListener { picker, oldVal, newVal ->
+            aGE = newVal
+//            Toast.makeText(this, aGE.toString(), Toast.LENGTH_LONG).show()
+        }
+
+        filter_picker_height.setOnValueChangedListener { picker, oldVal, newVal ->
+            hEIGHT = newVal
+//            Toast.makeText(this, hEIGHT.toString(), Toast.LENGTH_LONG).show()
+        }
+
+        filter_picker_weight.setOnValueChangedListener { picker, oldVal, newVal ->
+            wEIGHT = newVal
+//            Toast.makeText(this, hEIGHT.toString(), Toast.LENGTH_LONG).show()
+        }
     }
 
     fun  initViewModel(){

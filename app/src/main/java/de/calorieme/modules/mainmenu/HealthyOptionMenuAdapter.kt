@@ -28,13 +28,13 @@ class HealthyOptionMenuAdapter (private val  items: List<HealthyOptionMenuViewMo
 
             itemView.txt_menu.text = item.mName
             if(item.mtype == "M1") {
-                itemView.icon_type.setImageResource(R.drawable.kcal_icon)
+                itemView.icon_type.setImageResource(R.drawable.item_calorien)
             }else if(item.mtype == "M2"){
-
+                itemView.icon_type.setImageResource(R.drawable.item_trainning)
             }  else if(item.mtype == "M3"){
-
+                itemView.icon_type.setImageResource(R.drawable.item_food_select)
             }else{
-
+                itemView.icon_type.setImageResource(R.drawable.item_centercare)
             }
 
 
