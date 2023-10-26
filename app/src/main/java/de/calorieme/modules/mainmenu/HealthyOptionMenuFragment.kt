@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import de.calorieme.R
 import de.calorieme.common.base.BaseFragment
+import de.calorieme.modules.calcalorien.BmiActivity
 import de.calorieme.modules.calcalorien.MainCalSelectGenderActivity
 import kotlinx.android.synthetic.main.fragment_healthymenu.recycler_view
 import kotlinx.android.synthetic.main.fragment_healthymenu.swipe_refresh
@@ -53,7 +54,8 @@ class HealthyOptionMenuFragment : BaseFragment() , HealthyOptionMenuAdapter.List
 
     override fun onTopicClick(itemId: Int, item: HealthyOptionMenuViewModel.MenuItem) {
         if(itemId==0){
-            MainCalSelectGenderActivity.start(context)
+            BmiActivity.startWithOutData(context )
+//            MainCalSelectGenderActivity.start(context)
         }else if(itemId==1){
 
         }else if(itemId==2){

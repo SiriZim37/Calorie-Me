@@ -2,24 +2,26 @@ package de.calorieme.modules.calcalorien
 
 import android.content.Context
 import android.content.Intent
-import android.hardware.SensorManager
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import android.widget.NumberPicker
 import android.widget.ProgressBar
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import de.calorieme.R
 import kotlinx.android.synthetic.main.activity_bmi.*
-import kotlinx.android.synthetic.main.item_healthymenu.view.icon_type
+
 
 class BmiActivity  : AppCompatActivity(){
 
     lateinit var progressBar: ProgressBar
     var i = 0
+    var aGE = 0
+    var gendertype : String= ""
 
     private val viewModel by lazy {
         ViewModelProviders.of(this).get(BmiViewModel::class.java)
@@ -46,9 +48,9 @@ class BmiActivity  : AppCompatActivity(){
 
         if(data_id == "F"){
             img_fm.visibility = View.VISIBLE
-            img_m.visibility = View.GONE
+//            img_m.visibility = View.GONE
         } else if(data_id == "M") {
-            img_m.visibility = View.VISIBLE
+//            img_m.visibility = View.VISIBLE
             img_fm.visibility = View.GONE
         }
 
@@ -74,14 +76,36 @@ class BmiActivity  : AppCompatActivity(){
             value = 1.90f
         }
 
+        filter_picker.maxValue = 99
+        filter_picker.minValue = 10
+        filter_picker.value = 10
+
+        filter_picker.setOnValueChangedListener { picker, oldVal, newVal ->
+            aGE = newVal
+//            Toast.makeText(this, aGE.toString(), Toast.LENGTH_LONG).show()
+            //Display the newly selected number to text view
+//            text_view.text = "Selected Value : $newVal"
+        }
+
+        select_fm.setOnClickListener {
+            gendertype = "F"
+            li_fm.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.normalblue))
+            li_m.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.white))
+        }
+        select_m.setOnClickListener {
+            gendertype = "M"
+            li_m.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.normalblue))
+            li_fm.setBackgroundColor(ContextCompat.getColor(this@BmiActivity, R.color.white))
+        }
+
         calculate.setOnClickListener {
-            var height = height_ET.text.toString()
-            var weight = weight_ET.text.toString()
-            var age = age_ET.text.toString()
-            if( height == "" || weight == "" || age == "" || value ==  0f){
+            var height = input_height_ET.text.toString()
+            var weight = input_weight_ET.text.toString()
+
+            if( height == "" || weight == "" || aGE.toString() == "" || value ==  0f || gendertype == ""){
                 Toast.makeText(this, "Please fill all your information", Toast.LENGTH_LONG).show()
             }else{
-                viewModel.calculationCalorien( data_id!! , height.toFloat() ,weight.toFloat()  , age.toFloat() , value)
+                viewModel.calculationCalorien( gendertype!! , height.toFloat() ,weight.toFloat()  , aGE.toFloat() , value)
             }
 
         }
@@ -92,6 +116,7 @@ class BmiActivity  : AppCompatActivity(){
         viewModel.whenDataLoadCal.observe(this , Observer {
             it?.let {
                summProgressbar(it)
+
             }
         })
     }
@@ -105,14 +130,13 @@ class BmiActivity  : AppCompatActivity(){
                 if (i <= 100) {
                     progressBar.progress = i
                     i++
-                    Handler().postDelayed(this, 20)
+                    Handler().postDelayed(this, 10)
                 } else {
                     tv_bmisum.text = "" + sum
                     Handler().removeCallbacks(this)
                 }
             } }, 200)
-
-
+        progress_layout.post { progress_layout.requestFocus() }
     }
 
     companion object {
@@ -121,6 +145,11 @@ class BmiActivity  : AppCompatActivity(){
                   gender: String ) {
             val intent = Intent(context, BmiActivity::class.java)
             intent.putExtra(GENDER_ID, gender)
+            context?.startActivity(intent)
+        }
+
+        fun startWithOutData(context: Context?) {
+            val intent = Intent(context, BmiActivity::class.java)
             context?.startActivity(intent)
         }
     }

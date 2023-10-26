@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_small"
                 android:gravity="center"
-                android:text="Home Registration"
+                android:text="MENU"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_large_size"
                 app:layout_constraintBottom_toBottomOf="parent"
