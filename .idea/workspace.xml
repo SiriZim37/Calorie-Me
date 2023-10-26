@@ -10,22 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7417fa9-0153-4be5-9c46-1cbd6052ab56" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/item_calorien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/item_centercare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/item_food_select.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/item_trainning.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/mainmenu/HealthyOptionMenuAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/mainmenu/HealthyOptionMenuAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/kcal_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/circular_progress_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circular_progress_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/circular_shape.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circular_shape.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bmi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bmi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,22 +41,25 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2XGzdw71NGmwBcMicSLzrGPHSog" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "ScreenshotViewer.SavePath": "/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/ImageCalorieMe",
-    "android-custom-view/Users/sirivimonmeuntup/Library/Android/sdk/sources/android-31/android/view/View.java_SELECTED": "View",
-    "cidr.known.project.marker": "true",
-    "last_directory_selection": "/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/GitHub/CalorieMe/app/src/main/res/drawable",
-    "last_opened_file_path": "/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/GitHub/CalorieMe/app/src/main/res/drawable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ScreenshotViewer.SavePath&quot;: &quot;/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/ImageCalorieMe&quot;,
+    &quot;android-custom-view/Users/sirivimonmeuntup/Library/Android/sdk/sources/android-31/android/view/View.java_SELECTED&quot;: &quot;View&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/GitHub/CalorieMe/app/src/main/res/drawable&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/GitHub/CalorieMe/app/src/main/res/drawable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
@@ -148,24 +148,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiViewModel.kt</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiActivity.kt</url>
-          <line>82</line>
+          <line>84</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiActivity.kt</url>
-          <line>94</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiViewModel.kt</url>
+          <line>51</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiActivity.kt</url>
-          <line>97</line>
-          <option name="timeStamp" value="4" />
+          <line>155</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/de/calorieme/modules/calcalorien/BmiActivity.kt</url>
+          <line>181</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

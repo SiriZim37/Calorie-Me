@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.CalorieMe" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/darkblue</item>
+        <item name="colorPrimary">?attr/colorSecondaryVariant</item>
         <item name="colorPrimaryVariant">@color/normalblue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

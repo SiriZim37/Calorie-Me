@@ -17,7 +17,8 @@ import kotlinx.android.synthetic.main.activity_bmi.*
 
 class BmiActivity  : AppCompatActivity(){
 
-    lateinit var progressBar: ProgressBar
+    lateinit var progressBarCal: ProgressBar
+    lateinit var progressBarBMI: ProgressBar
     var i = 0
     var aGE = 0
     var hEIGHT = 0
@@ -44,8 +45,9 @@ class BmiActivity  : AppCompatActivity(){
 
     fun  initInstances(){
 
-        progressBar = findViewById(R.id.progress_circular)
-        progress_layout.visibility = View.GONE
+        progressBarCal = findViewById(R.id.progress_circular_cal)
+        progressBarBMI = findViewById(R.id.progress_bmi)
+        progress_layout1.visibility = View.GONE
         configPickerNummer()
 
         if(data_id == "F"){
@@ -92,10 +94,15 @@ class BmiActivity  : AppCompatActivity(){
 
         calculate.setOnClickListener {
 
-            if( hEIGHT.toString()  == "" || wEIGHT.toString()  == "" || aGE.toString() == "" || value ==  0f || gendertype == ""){
+            if( hEIGHT.toString()  == ""  || hEIGHT == null
+                || wEIGHT.toString()  == "" || wEIGHT == null
+                || aGE.toString() == "" || aGE == null
+                || value ==  0f || value == null
+                || gendertype == "" || gendertype == null  ){
                 Toast.makeText(this, "Please fill all your information", Toast.LENGTH_LONG).show()
             }else{
                 viewModel.calculationCalorien( gendertype!! , hEIGHT.toFloat() ,wEIGHT.toFloat()  , aGE.toFloat() , value)
+
             }
 
         }
@@ -136,28 +143,58 @@ class BmiActivity  : AppCompatActivity(){
     fun  initViewModel(){
         viewModel.whenDataLoadCal.observe(this , Observer {
             it?.let {
-               summProgressbar(it)
+                summCalProgressbar(it)
+
+            }
+        })
+
+        viewModel.whenDataLoadBMI.observe(this , {
+            it?.let {
+                if(it.rEsult == "")
+                    Toast.makeText(this, "Please fill all your information", Toast.LENGTH_LONG).show()
+               else
+                   summBMIProgressbar(it)
 
             }
         })
     }
 
-    fun summProgressbar( sum : String){
-        progress_layout.visibility = View.VISIBLE
+    fun summCalProgressbar( sum : String){
+        progress_layout1.visibility = View.VISIBLE
+
         Handler().postDelayed(object : Runnable {
             override fun run() {
                 // set the limitations for the numeric
                 // text under the progress bar
                 if (i <= 100) {
-                    progressBar.progress = i
+                    progressBarCal.progress = i
                     i++
                     Handler().postDelayed(this, 10)
                 } else {
-                    tv_bmisum.text = "" + sum
+                    tv_calosum.text = "" + sum
                     Handler().removeCallbacks(this)
                 }
             } }, 200)
-        progress_layout.post { progress_layout.requestFocus() }
+//        progress_layout.post { progress_circular_cal.requestFocus() }
+    }
+
+    fun summBMIProgressbar( sum : BmiViewModel.bmiResult){
+        progress_layout1.visibility = View.VISIBLE
+        Handler().postDelayed(object : Runnable {
+            override fun run() {
+                // set the limitations for the numeric
+                // text under the progress bar
+                if (i <= 100) {
+                    progressBarBMI.progress = i
+                    i++
+                    Handler().postDelayed(this, 10)
+                } else {
+                    tv_bmisum.text = "" + sum.score
+                    tv_bmires.text = "" + sum.rEsult
+                    Handler().removeCallbacks(this)
+                }
+            } }, 200)
+        calculate.post { calculate.requestFocus() }
     }
 
     companion object {
