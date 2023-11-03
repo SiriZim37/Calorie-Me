@@ -1,14 +1,22 @@
 # Calories-Me
 
+# Example source code 
 Example source code for calculate BMI (Body Mass Index) & Calorie per Day
 
 The BMI calculator analyzes the data received from the user and displays relevant information about the correct weight.
 
+## Development Roadmap
 
-__Introduction : Model View View Model (MVVM)__
+- [x] [Kotlin](https://kotlinlang.org/)
+- [x] [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
 
-__Programming Language  : Kotlin__
 
+## Features 
+
+- [x] Calorie calculator 
+- [x] Food Info & Recommend Food 
+- [x] Fitness media
+- [x] Healthy Care
 
 Set NumberPicker for select Age , Height , Weight
 
@@ -69,4 +77,6 @@ BmiActivity.kt
 
 ![ezcv logo](https://github.com/SiriZim37/Calorie-Me/blob/main/ImageCalorieMe/calorie_menu1.png)
 ![ezcv logo](https://github.com/SiriZim37/Calorie-Me/blob/main/ImageCalorieMe/calorie_menu3.png)
+
+
 
