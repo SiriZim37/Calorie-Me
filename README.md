@@ -14,9 +14,9 @@ The BMI calculator analyzes the data received from the user and displays relevan
 ## Features 
 
 - [x] Calorie calculator 
-- [x] Food Info & Recommend Food 
-- [x] Fitness media
-- [x] Healthy Care
+- [ ] Food Info & Recommend Food 
+- [ ] Fitness media
+- [ ] Healthy Care
 
 Set NumberPicker for select Age , Height , Weight
 
