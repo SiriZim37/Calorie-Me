@@ -75,8 +75,8 @@ BmiActivity.kt
             } }, 200)
 ```           
 
-![ezcv logo](https://github.com/SiriZim37/Calorie-Me/blob/main/ImageCalorieMe/calorie_menu1.png)
-![ezcv logo](https://github.com/SiriZim37/Calorie-Me/blob/main/ImageCalorieMe/calorie_menu3.png)
+![ezcv logo](https://github.com/SiriZim37/Calorie-Me/blob/main/ImageCalorieMe/calorieImg.png)
+
 
 
 
