@@ -9,15 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7417fa9-0153-4be5-9c46-1cbd6052ab56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f7417fa9-0153-4be5-9c46-1cbd6052ab56" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,18 +34,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;ScreenshotViewer.SavePath&quot;: &quot;/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/ImageCalorieMe&quot;,
-    &quot;android-custom-view/Users/sirivimonmeuntup/Library/Android/sdk/sources/android-31/android/view/View.java_SELECTED&quot;: &quot;View&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/GitHub/CalorieMe/app/src/main/res/drawable&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/GitHub/CalorieMe/app/src/main/res/drawable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "ScreenshotViewer.SavePath": "/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/ImageCalorieMe",
+    "android-custom-view/Users/sirivimonmeuntup/Library/Android/sdk/sources/android-31/android/view/View.java_SELECTED": "View",
+    "cidr.known.project.marker": "true",
+    "last_directory_selection": "/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/GitHub/CalorieMe/app/src/main/res/drawable",
+    "last_opened_file_path": "/Users/sirivimonmeuntup/Documents/Dev Project/Android Project for CV/GitHub/CalorieMe"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
